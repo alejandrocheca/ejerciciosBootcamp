@@ -84,6 +84,9 @@ body, div,h1,li,ul{
 .submenubar img{
     width: 20%;
 }
+.container{
+text-align: center;
+}
 .pizzas{
     background-color:white !important;
     border: 0.5px solid white;
@@ -93,7 +96,12 @@ body, div,h1,li,ul{
 	text-align: center;
     max-height: 90%;
     position:relative;
+}.pizzas h2{
     
+	text-align: left;
+    width: 98%;    
+    position:relative;
+    text-decoration: underline #000;
 }
 .pizzas .id_pizza{
 	width: 19%;
@@ -107,12 +115,10 @@ body, div,h1,li,ul{
 }
 
 .pizzas .id_pizza img{
-	max-height: 50% !important;
-	max-width: 90% !important;
+	max-height: 30% !important;
+	max-width: 30% !important;
 	
 }
-
-
 /* FOOTER */
 .futer{
     background-color: rgba(30,30,30,0.9);
@@ -121,14 +127,16 @@ body, div,h1,li,ul{
     overflow: hidden;
 
 }
-
 .futer .socialnetwork{
-    width: 49%;
+    width: 35%;
     float: left;
+    margin-left: 2%;
 }
 .futer .contact{
-    width: 49%;
+    width: 35%;
     float: right;
+    text-align: right;
+    margin-right: 2%;
 }
 .futer h4{
     color: white;
