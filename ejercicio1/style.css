@@ -111,3 +111,33 @@ body, div,h1,li,ul{
 	max-width: 90% !important;
 	
 }
+
+
+/* FOOTER */
+.futer{
+    background-color: rgba(30,30,30,0.9);
+    height: 5%;
+    width: 100%;
+    overflow: hidden;
+
+}
+
+.futer .socialnetwork{
+    width: 49%;
+    float: left;
+}
+.futer .contact{
+    width: 49%;
+    float: right;
+}
+.futer h4{
+    color: white;
+}
+.futer article{
+    color: white;
+}
+
+.futer img{
+    max-height: 40px;
+    width: 40px;
+}
