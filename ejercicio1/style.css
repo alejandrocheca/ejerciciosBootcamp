@@ -1,0 +1,113 @@
+body{
+    background-color: #ffffff !important;
+    height: 100%;
+}
+body, div,h1,li,ul{
+	margin: 0 auto;
+	padding: 0 auto;
+}
+
+.menubar{
+	background-color:#A5C1FE;
+	
+	position: relative;
+	height: 35px;
+	width: 100%;
+	margin: 0 auto;
+	z-index: 6;
+    text-align: right;
+
+	
+}
+.menubar>ul{
+	padding: 0;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 50px;
+	width: 100%;
+	margin: auto;
+	z-index: 1;
+    text-align: right;
+	
+}
+.menubar>ul>li{
+	display: inline-block;
+	padding:10px 15px 10px 15px;
+    text-align: right;
+	
+}
+.menubar>ul>li>a{
+	font-size:18px;
+	color:#fff;
+    text-align: right;
+	
+}
+
+
+.submenubar{
+	background-color:#A5C1FE;
+	
+	position: relative;
+	height: 90px;
+	width: 100%;
+	margin: 0 auto;
+	z-index: 6;
+	
+}
+.submenubar>ul{
+	padding: 0;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 50px;
+	width: 90%;
+	margin: auto;
+	z-index: 1;
+    text-align: right;
+	
+}
+.submenubar>ul>li{
+	display: inline-block;
+	padding:10px 15px 10px 15px;
+
+}
+.submenubar>ul>li>a{
+	font-size:18px;
+	color:#fff;
+	
+}
+.submenubar img{
+    width: 20%;
+}
+.pizzas{
+    background-color:white !important;
+    border: 0.5px solid white;
+    border-radius: 5px;
+    width: 90%;
+	margin-top: 5%;
+	text-align: center;
+    max-height: 90%;
+    position:relative;
+    
+}
+.pizzas .id_pizza{
+	width: 19%;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 2% 2% 2% 2%;
+    padding: 2% 0;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.pizzas .id_pizza img{
+	max-height: 50% !important;
+	max-width: 90% !important;
+	
+}
