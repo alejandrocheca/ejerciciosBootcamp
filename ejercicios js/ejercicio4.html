@@ -1,0 +1,31 @@
+<!-- Crear una función que devuelva un determinado número de números primos. -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>validar NIF</title><meta charset="utf-8">
+        <style>
+            .boton{padding:15px; width: auto; display: inline-block; margin: 25px;
+				cursor: pointer; color: yellow; border-radius: 40px; background: rgb(41, 128, 0);}
+			
+        </style>
+        <script>
+            function validarNum(num){
+                    if(num%2==0){
+                        alert("El numero no es primo");
+                    }else{
+                        alert("El numero es primo");
+                    }
+                }
+        
+
+        </script>
+    </head>
+    <body>
+        <form action="">
+            <label for="fname">Numero:</label>
+            <input type="text" id="num" name="num"><br>
+            <div class="boton" onclick="validarNum()">Validar numero</div>
+        </form>
+    </body>
+</html>
