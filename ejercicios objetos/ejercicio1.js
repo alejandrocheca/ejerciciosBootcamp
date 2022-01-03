@@ -1,7 +1,9 @@
 // Crear la función constructora del juego Adivina el Número.
 
 // llamando a la función
-adivinaAleatorio(num);{/*...*/}
+adivinaAleatorio(num){
+    ///TODO
+}
 
 // función
 function adivinaAleatorio(){
