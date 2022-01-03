@@ -1,0 +1,49 @@
+<!--
+Adivina el Número, generar un número entre el 0 y el 100,
+introducir un número e informar si es igual, mayor o menor.
+Hay un máximo de 10 intentos para encontrar el número que sea igual.
+-->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>acertar numero</title><meta charset="utf-8">
+		<style>
+			.boton{padding:15px; width: auto; display: inline-block; margin: 25px;
+				cursor: pointer; color: yellow; border-radius: 40px; background: rgb(41, 128, 0);}
+			.caja{border: solid 2px blue; float: left; font-weight: bold;}
+			.informacion{padding:15px; width: auto; display: inline-block; margin: 25px;
+				 color: rgb(27, 116, 112); border-radius: 40px; background: rgb(218, 134, 86);font-weight: bold;}
+		</style>
+		<script type="text/javascript">
+			function adivinaAleatorio(){
+				var numeroAleatorio = Math.floor((Math.random()*(101-1))+1);
+				document.getElementById('resultado').innerHTML = 'Número aleatorio = ' + numeroAleatorio;
+				var contador = 1;
+				var respuesta = prompt('Introduce un numero del 1 al 100');
+				while(Number(respuesta)!==numeroAleatorio && contador<10){
+					if(respuesta<numeroAleatorio){
+						respuesta = prompt('El número es mayor que el introducido. Inténtalo otra vez');
+					}else{
+						respuesta = prompt('El número es menor que el introducido. Inténtalo otra vez');
+					}
+					contador++;
+					document.getElementById('contador').innerHTML = 'Intentos = ' + contador;
+				}
+				if(contador==10){
+					alert('Has superado el número máximo de intentos. Se acabó');
+				}else{
+					alert('Enhorabuena. Has acertado');
+				}
+				
+			}
+		</script>
+	</head>
+	<body>
+		<div class="form">
+			<div class="boton" onclick="adivinaAleatorio()">Adivinar número</div>
+			<div class="informacion" id="contador">00</div>
+			<div class="informacion" id="resultado">00</div>
+		</div>
+	</body>
+</html>
