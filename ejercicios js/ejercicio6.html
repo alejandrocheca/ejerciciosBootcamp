@@ -1,0 +1,36 @@
+<!-- Definir una función que determine si la cadena de texto que se le pasa como parámetro es un palíndromo, es decir,
+ si se lee de la misma forma desde la izquierda y desde la derecha. Ejemplo de palíndromo complejo:
+"La ruta nos aporto otro paso natural".
+ -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>validar NIF</title><meta charset="utf-8">
+        <style>
+            .boton{padding:15px; width: auto; display: inline-block; margin: 25px;
+				cursor: pointer; color: yellow; border-radius: 40px; background: rgb(41, 128, 0);}
+			
+        </style>
+        <script>
+            function Palindromos(cadena){
+                const arrValue = cadena.split ('-'); 
+                const reveArrVal = arrValue.reverse();  
+                const revString = reveArrVal.join('');  
+                
+                if (cadena == revString){  
+                    alert('El texto es palíndromo'); 
+                    }else{  
+                    alert ('El texto es palíndromo'); 
+                    }  
+                }  
+        </script>
+    </head>
+    <body>
+        <form action="">
+            <label for="name">Texto:</label>
+            <input type="text" id="cadena" name="cadena"><br>
+            <div class="boton" onclick="Palindromos()">Validar palíndromo</div>
+        </form>
+    </body>
+</html>
