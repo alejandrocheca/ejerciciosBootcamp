@@ -1,0 +1,45 @@
+<!-- Crear una función que valide un NIF -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>validar NIF</title><meta charset="utf-8">
+        <style>
+            .boton{padding:15px; width: auto; display: inline-block; margin: 25px;
+				cursor: pointer; color: yellow; border-radius: 40px; background: rgb(41, 128, 0);}
+			
+        </style>
+        <script>
+            function validarNIF(NIF) {
+                var num
+                var letr
+                var letra
+                var expresion_regular_NIF
+                
+                expresion_regular_NIF = /^\d{8}[a-zA-Z]$/;
+                
+                if(expresion_regular_NIF.test (NIF) == true){
+                    num = NIF.substr(0,NIF.length-1);
+                    letr = NIF.substr(NIF.length-1,1);
+                    num = num % 23;
+                    letra='TRWAGMYFPDXBNJZSQVHLCKET';
+                    letra=letra.substring(num,num+1);
+                    if (letra!=letr.toUpperCase()) {
+                        alert('Error NIF, la letra del NIF no se corresponde');
+                    }else{
+                        alert('NIF correcto');
+                    }
+                }else{
+                    alert('Error NIF, formato no válido');
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <form action="">
+            <label for="fname">NIF:</label>
+            <input type="text" id="NIF" name="NIF"><br>
+            <div class="boton" onclick="validarNIF()">Validar NIF</div>
+        </form>
+    </body>
+</html>
