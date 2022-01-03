@@ -1,4 +1,9 @@
 // Crear la función constructora del juego Adivina el Número.
+
+// llamando a la función
+adivinaAleatorio(num);{/*...*/}
+
+// función
 function adivinaAleatorio(){
     var numeroAleatorio = Math.floor((Math.random()*(101-1))+1);
     document.getElementById('resultado').innerHTML = 'Número aleatorio = ' + numeroAleatorio;
@@ -20,3 +25,4 @@ function adivinaAleatorio(){
     }
     
 }
+
