@@ -139,7 +139,6 @@ function resetear(){
       break;
           
   }
-   
   resetear();
   resultado.textContent = res;
 }
