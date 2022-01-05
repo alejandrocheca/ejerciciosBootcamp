@@ -17,13 +17,15 @@ function init(){
   var numNueve = document.getElementById('btnNum9');
   var numCero = document.getElementById('btnNum0');
     //simbolos
-  var resultado = document.getElementById('resultado');
+  var result = document.getElementById('btnResult');
   var reset = document.getElementById('reset');
   var suma = document.getElementById('btnCalcPlus');
   var resta = document.getElementById('btnCalcMinus');
   var multiplicacion = document.getElementById('btnCalcMult');
   var division = document.getElementById('btnCalcDiv');
   var fraccion = document.getElementById('btnCalcFraction');
+  var exponencial = document.getElementById('btnCalcbtnCalcSquaring');
+  var raiz = document.getElementById('btnCalcSquare');
 
   
     //Eventos de click
@@ -80,12 +82,17 @@ function init(){
       operacion = "/";
       limpiar();
   }
-  fraccion.onclick = function(e){
+
+   fraccion.onclick = function(e){
       operandoa = resultado.textContent;
       limpiar();
   }
-  
-  igual.onclick = function(e){
+    
+    exponencial.onclick = function(e){
+      operandoa = resultado.textContent;
+      limpiar();
+  }
+  result.onclick = function(e){
       operandob = resultado.textContent;
       resolver();
   }
@@ -122,14 +129,12 @@ function resetear(){
     case "x²":
       res = parseFloat(operandoa) / parseFloat(operandoa);
       break;
-    case "%":
-      res = ((parseFloat(operandoa) * parseFloat(operandob)) / 100);
-      break;
     case "√x":
       res = Math.Sqrt(parseFloat(operandoa));
       break;
           
   }
+   
   resetear();
   resultado.textContent = res;
 }
