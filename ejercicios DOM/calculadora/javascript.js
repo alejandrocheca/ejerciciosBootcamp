@@ -16,6 +16,7 @@ function init(){
   var numOcho = document.getElementById('btnNum8');
   var numNueve = document.getElementById('btnNum9');
   var numCero = document.getElementById('btnNum0');
+  var punto = document.getElementById('btnPoint')
     //simbolos
   var result = document.getElementById('btnResult');
   var reset = document.getElementById('reset');
@@ -59,6 +60,10 @@ function init(){
   numCero.onclick = function(e){
       resultado.textContent = resultado.textContent  + "0";
   }
+  punto.onclick = function(e){
+      resultado.textContent = resultado.textContent  + ".";
+  }
+  
   reset.onclick = function(e){
       resetear();
   }
