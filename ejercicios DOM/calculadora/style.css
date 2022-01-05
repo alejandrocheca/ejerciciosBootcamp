@@ -10,6 +10,12 @@ td, th {
 	width: 25%;
 	height: 25%;
 }
+.btnDrop{
+    width: 100%;
+}
+.resultado{
+    background-color: #f0e6cc;
+}
 th {
 	background: #f0e6cc;
 }
