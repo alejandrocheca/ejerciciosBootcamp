@@ -1,34 +1,114 @@
 
-    //variables
-    var textResult = document.getElementById("textResult");// base para mostrar datos
-    var listenerBtn = [];//array para introducir numeros y signos
+//Declaramos variables
+var operandoa;
+var operandob;
+var operacion;
+function init(){
+  //variables
+  var resultado = document.getElementById('resultado');
+  var reset = document.getElementById('reset');
+  var suma = document.getElementById('suma');
+  var resta = document.getElementById('resta');
+  var multiplicacion = document.getElementById('multiplicacion');
+  var division = document.getElementById('division');
+  var igual = document.getElementById('igual');
+  var uno = document.getElementById('uno');
+  var dos = document.getElementById('dos');
+  var tres = document.getElementById('tres');
+  var cuatro = document.getElementById('cuatro');
+  var cinco = document.getElementById('cinco');
+  var seis = document.getElementById('seis');
+  var siete = document.getElementById('siete');
+  var ocho = document.getElementById('ocho');
+  var nueve = document.getElementById('nueve');
+  var cero = document.getElementById('cero');
+    //Eventos de click
+  uno.onclick = function(e){
+      resultado.textContent = resultado.textContent  + "1";
+  }
+  dos.onclick = function(e){
+      resultado.textContent = resultado.textContent  + "2";
+  }
+  tres.onclick = function(e){
+      resultado.textContent = resultado.textContent  + "3";
+  }
+  cuatro.onclick = function(e){
+      resultado.textContent = resultado.textContent  + "4";
+  }
+  cinco.onclick = function(e){
+      resultado.textContent = resultado.textContent  + "5";
+  }
+  seis.onclick = function(e){
+      resultado.textContent = resultado.textContent  + "6";
+  }
+  siete.onclick = function(e){
+      resultado.textContent = resultado.textContent  + "7";
+  }
+  ocho.onclick = function(e){
+      resultado.textContent = resultado.textContent  + "8";
+  }
+  nueve.onclick = function(e){
+      resultado.textContent = resultado.textContent  + "9";
+  }
+  cero.onclick = function(e){
+      resultado.textContent = resultado.textContent  + "0";
+  }
+  reset.onclick = function(e){
+      resetear();
+  }
+  suma.onclick = function(e){
+      operandoa = resultado.textContent;
+      operacion = "+";
+      limpiar();
+  }
+  resta.onclick = function(e){
+      operandoa = resultado.textContent;
+      operacion = "-";
+      limpiar();
+  }
+  multiplicacion.onclick = function(e){
+      operandoa = resultado.textContent;
+      operacion = "*";
+      limpiar();
+  }
+  division.onclick = function(e){
+      operandoa = resultado.textContent;
+      operacion = "/";
+      limpiar();
+  }
+  igual.onclick = function(e){
+      operandob = resultado.textContent;
+      resolver();
+  }
+  function limpiar(){
+  resultado.textContent = "";
+}
+function resetear(){
+  resultado.textContent = "";
+  operandoa = 0;
+  operandob = 0;
+  operacion = "";
+}
+    function resolver(){
+  var res = 0;
+  switch(operacion){
+    case "+":
+      res = parseFloat(operandoa) + parseFloat(operandob);
+      break;
 
+    case "-":
+        res = parseFloat(operandoa) - parseFloat(operandob);
+        break;
 
-    //introducir valores acorde a los botones
-    //botones numericos
+    case "*":
+      res = parseFloat(operandoa) * parseFloat(operandob);
+      break;
 
-    listenerBtn.push(document.getElementById("btnNum0"));
-    listenerBtn.push(document.getElementById("btnNum1"));
-    listenerBtn.push(document.getElementById("btnNum2"));
-    listenerBtn.push(document.getElementById("btnNum3"));
-    listenerBtn.push(document.getElementById("btnNum4"));
-    listenerBtn.push(document.getElementById("btnNum5"));
-    listenerBtn.push(document.getElementById("btnNum6"));
-    listenerBtn.push(document.getElementById("btnNum7"));
-    listenerBtn.push(document.getElementById("btnNum8"));
-    listenerBtn.push(document.getElementById("btnNum9"));
-    //botones calculos
-
-    listenerBtn.push(document.getElementById("btnCalcPlus"));
-    listenerBtn.push(document.getElementById("btnCalcMinus"));
-    listenerBtn.push(document.getElementById("btnCalcMult"));
-    listenerBtn.push(document.getElementById("btnCalcDiv"));
-    listenerBtn.push(document.getElementById("btnCalcbtnCalcSquare"));
-    listenerBtn.push(document.getElementById("btnCalcbtnCalcSquaring"));
-    
-    
-    //botones borrar
-
-    var btnDropCE = document.getElementById("btnDropCE");
-    var btnDropC = document.getElementById("btnDropC");
-    var btnDrop = document.getElementById("btnDrop");
+    case "/":
+      res = parseFloat(operandoa) / parseFloat(operandob);
+      break;
+  }
+  resetear();
+  resultado.textContent = res;
+}
+}
