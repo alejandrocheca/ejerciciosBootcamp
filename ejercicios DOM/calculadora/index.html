@@ -6,34 +6,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="text/javascript" src="javascript.js"></script>
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Calculadora</title>
 </head>
 <body>
-    <div id = "Contenedor">  
-        <div id= "Calculadora">         
-           <input id="Pantalla" type="textbox" class="textbox">
-             <div id= "Teclado" class="buttons">
-                <button class="button" value="AC">AC</button>
-                <button class="button" value="CE">CE</button>
-                <button class="button" value="%">%</button>
-                <button class="button" value="/">/</button><br>
-                <button class="button" value="7">7</button>
-                <button class="button" value="8">8</button>
-                <button class="button" value="9">9</button>
-                <button class="button" value="*">*</button><br>
-                <button class="button" value="4">4</button>
-                <button class="button" value="5">5</button>
-                <button class="button" value="6">6</button>
-                <button class="button" value="-">-</button><br>
-                <button class="button" value="1">1</button>
-                <button class="button" value="2">2</button>
-                <button class="button" value="3">3</button>
-                <button class="button" value="+">+</button><br>
-                <button class="button" value=".">.</button>
-                <button class="button" value="0">0</button>
-                <button class="button" value="Ans">Ans</button>
-                <button class="button" value="=">=</button>
-          </div>
-        </div>
+    <div class="container">
+        <table>
+            <tbody>
+                <tr>
+                    <td colspan="4"><input type="text"  name="" id=""></td>
+                </tr>
+                 <tr>
+                    <td><input type="button" id="btnCalc" value="%" /></td>
+                    <td><input type="button" id="btnDrop" value="CE" /></td>
+                    <td><input type="button" id="btnDrop" value="C" /></td>
+                    <td><input type="button" id="btnDrop" value="<x|" /></td>
+                </tr>
+                <tr>
+                    <td><input type="button" id="btnCalc" value="1/x" /></td>
+                    <td><input type="button" id="btnCalc" value="x²" /></td>
+                    <td><input type="button" id="btnCalc" value="√x" /></td>
+                    <td><input type="button" id="btnCalc" value="÷" /></td>
+                </tr>
+                <tr>
+                    <td><input type="button" id="btnNum7" value="7" /></td>
+                    <td><input type="button" id="btnNum8" value="8" /></td>
+                    <td><input type="button" id="btnNum9" value="9" /></td>
+                    <td><input type="button" id="btnCalc" value="x" /></td>
+                </tr>
+                <tr>
+                    <td><input type="button" id="btnNum4" value="4" /></td>
+                    <td><input type="button" id="btnNum5" value="5" /></td>
+                    <td><input type="button" id="btnNum6" value="6" /></td>
+                    <td><input type="button" id="btnCalc" value="-" /></td>
+                </tr>
+                <tr>
+                    <td><input type="button" id="btnNum1" value="1" /></td>
+                    <td><input type="button" id="btnNum2" value="2" /></td>
+                    <td><input type="button" id="btnNum3" value="3" /></td>
+                    <td><input type="button" id="btnCalc" value="+" /></td>
+                </tr>
+                <tr>
+                    <td><input type="button" id="btnplas" value="+/-" /></td>
+                    <td><input type="button" id="btnNum" value="0" /></td>
+                    <td><input type="button" id="btnpoint" value="." /></td>
+                    <td><input type="button" id="btnEqual" value="=" /></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </body>
 </html>
