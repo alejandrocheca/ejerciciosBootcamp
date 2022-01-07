@@ -1,53 +1,38 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script type="text/javascript" src="javascript.js"></script>
-    <link rel="stylesheet" href="style.css">
-    <title>Calculadora</title>
-</head>
-<body>
-    <div class="container">
-        <table>
-            <tbody>
-                <tr>
-                    <td colspan="4"><input type="text" name="resultado" id="resultado"></td>
-                        <td><button id="reset" value="«" />«</td>
-                </tr>
-                <tr>
-                    <td><button id="btnCalcFraction" value="1/x" />1/x</td>
-                    <td><button id="btnCalcbtnCalcSquaring" value="x²" />x²</td>
-                    <td><button id="btnCalcSquare" value="√x" />√x</td>
-                    <td><button id="btnCalcDiv" value="÷" />÷</td>
-                </tr>
-                <tr>
-                    <td><button id="btnNum7" value="7" />7</td>
-                    <td><button id="btnNum8" value="8" />8</td>
-                    <td><button id="btnNum9" value="9" />9</td>
-                    <td><button id="btnCalcMult" value="x" />x</td>
-                </tr>
-                <tr>
-                    <td><button id="btnNum4" value="4" />4</td>
-                    <td><button id="btnNum5" value="5" />5</td>
-                    <td><button id="btnNum6" value="6" />6</td>
-                    <td><button id="btnCalcMinus" value="-" />-</td>
-                </tr>
-                <tr>
-                    <td><button id="btnNum1" value="1" />1</td>
-                    <td><button id="btnNum2" value="2" />2</td>
-                    <td><button id="btnNum3" value="3" />3</td>
-                    <td><button id="btnCalcPlus" value="+" />+</td>
-                </tr>
-                <tr>
-                    <td><button id="btnplas" value="+/-" />+/-</td>
-                    <td><button id="btnNum" value="0" />0</td>
-                    <td><button id="btnPoint" value="." />.</td>
-                    <td><button id="btnResult" value="=" />=</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-</body>
-</html>
+  <html lang="es">
+    <head>
+      <meta charset="utf-8">
+      <title>Calculadora</title>
+      <link href="style.css" rel="stylesheet">
+    </head>
+    <body>
+      <div class="calculator-grid">
+      <div class="output">
+        <div data-previous-operand class="previous-operand">  
+      </div>
+        <div data-current-operand class="current-operand">
+      </div>
+        </div>
+        <button dato-all-clear class="span-two">AC</button>
+        <button dato-eliminar>DEL</button>
+        <button data-operation>÷</button>
+        <button data-number>1</button>
+        <button data-number>2</button>
+        <button data-number>3</button>
+        <button data-operation>*</button>
+        <button data-number>4</button>
+        <button data-number>5</button>
+        <button data-number>6</button>
+        <button data-operation>+</button>
+        <button data-number>7</button>
+        <button data-number>8</button>
+        <button data-number>9</button>
+        <button data-operation>-</button>
+        <button data-number>.</button>
+        <button data-number>0</button>
+        <button data-equals class="span-two">=</button>
+        <script src="javascript.js"></script>
+      </div>
+
+    </body>
+  </html>
